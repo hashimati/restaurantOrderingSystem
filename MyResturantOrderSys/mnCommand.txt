@@ -1,0 +1,1 @@
+mn create-app io-hashimati-myresturantordersys --profile service --lang java --build gradle--features mongo-reactive --features data-hibernate-jpa --features jdbc-tomcat --features management --features redis-lettuce --features rabbitmq

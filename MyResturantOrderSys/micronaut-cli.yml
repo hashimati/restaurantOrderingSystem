@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: io.hashimati.myresturantordersys
+---
+testFramework: junit
+sourceLanguage: java
