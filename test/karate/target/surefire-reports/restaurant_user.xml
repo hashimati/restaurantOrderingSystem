@@ -1,0 +1,79 @@
+<testsuite failures="0" name="restaurant_user.feature" skipped="0" tests="3" time="11.141641">
+  <testcase classname="restaurant_user" name="Restaurant User Registration" time="4.895557">
+    <system-out>* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url rootURL.concat(registrationPath) ................................ passed
+And request user .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And assert (response == 'Success' || response == 'Failed') ................ passed</system-out>
+  </testcase>
+  <testcase classname="restaurant_user" name="Restaurant User Login" time="1.073195">
+    <system-out>* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url rootURL.concat(registrationPath) ................................ passed
+And request user .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And assert (response == 'Success' || response == 'Failed') ................ passed
+* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url 'http://localhost:8080/login' ................................... passed
+And request {username: 'hashimatiRest', password:'helloworld'} ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == {username:'hashimatiRest' ,'roles':['restaurant'],access_token:'#notnull',refresh_token:'#notnull',token_type:"Bearer", expires_in:3600} . passed</system-out>
+  </testcase>
+  <testcase classname="restaurant_user" name="create restaurant" time="5.172889">
+    <system-out>* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url rootURL.concat(registrationPath) ................................ passed
+And request user .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And assert (response == 'Success' || response == 'Failed') ................ passed
+* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url 'http://localhost:8080/login' ................................... passed
+And request {username: 'hashimatiRest', password:'helloworld'} ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == {username:'hashimatiRest' ,'roles':['restaurant'],access_token:'#notnull',refresh_token:'#notnull',token_type:"Bearer", expires_in:3600} . passed
+* def rootURL = 'http://localhost:8080/api/' .............................. passed
+* def registrationPath = 'users/register/restaurant' ...................... passed
+* def user = {id: 'hashimatiRest', password:'helloworld'} ................. passed
+Given url 'http://localhost:8080/login' ................................... passed
+And request {username: 'hashimatiRest', password:'helloworld'} ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == {username:'hashimatiRest' ,'roles':['restaurant'],access_token:'#notnull',refresh_token:'#notnull',token_type:"Bearer", expires_in:3600} . passed
+And def accessToken = response.access_token ............................... passed
+Given url 'http://localhost:8080/api/restaurant/save' ..................... passed
+And header Authorization = 'Bearer ' + accessToken ........................ passed
+And request {username:'hashimatiRest', name:'Happiness', city:'Saihat', country:'Saihat', address:'Saihat' } . passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And def restaurantId = response.id ........................................ passed
+Given url 'http://localhost:8080/api/menu/uploadMenu/hashimatiRest/hashimatiRest_1' . passed
+And header Authorization = 'Bearer ' + accessToken ........................ passed
+And multipart field file = read('C:/Users/ahmed/Desktop/Menu.xlsx') ....... passed
+And multipart field message = 'hello world' ............................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:8080/api/session/save' ........................ passed
+And header Authorization = 'Bearer '+ accessToken ......................... passed
+And request { username: 'hashimatiRest', restaurant:'hashimatiRest_1'} .... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:8080/api/session/closesession' ................ passed
+And header Authorization = 'Bearer '+ accessToken ......................... passed
+And request { username: 'hashimatiRest', restaurant:'hashimatiRest_1'} .... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

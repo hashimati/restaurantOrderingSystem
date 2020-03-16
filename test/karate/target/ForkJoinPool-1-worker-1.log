@@ -1,0 +1,158 @@
+15:04:19.200 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:04:20.065 request:
+1 > POST http://localhost:8080/api/users/register/restaurant
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 46
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"id":"hashimatiRest","password":"helloworld"}
+
+15:04:24.098 response time in milliseconds: 4032.42
+1 < 200
+1 < Date: Mon, 16 Mar 2020 12:04:23 GMT
+1 < connection: keep-alive
+1 < content-length: 7
+1 < content-type: application/json
+Success
+
+15:04:24.118 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:04:24.123 request:
+1 > POST http://localhost:8080/login
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 52
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","password":"helloworld"}
+
+15:04:25.190 response time in milliseconds: 1065.80
+1 < 200
+1 < Date: Mon, 16 Mar 2020 12:04:25 GMT
+1 < connection: keep-alive
+1 < content-length: 577
+1 < content-type: application/json
+{"username":"hashimatiRest","roles":["restaurant"],"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY0LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjQsImlhdCI6MTU4NDM2MDI2NH0.yCrCKIG3RdNU_RC6sCxP0n0ls2NE1QWRXZuLDa8MAVE","refresh_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJpYXQiOjE1ODQzNjAyNjV9.6Qkq0rSQdFY8pm17fQcybfS3_UmiLCb6HCFBwnF-r6E","token_type":"Bearer","expires_in":3600}
+
+15:04:25.201 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:04:25.206 request:
+1 > POST http://localhost:8080/login
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 52
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","password":"helloworld"}
+
+15:04:25.321 response time in milliseconds: 113.39
+1 < 200
+1 < Date: Mon, 16 Mar 2020 12:04:25 GMT
+1 < connection: keep-alive
+1 < content-length: 577
+1 < content-type: application/json
+{"username":"hashimatiRest","roles":["restaurant"],"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo","refresh_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJpYXQiOjE1ODQzNjAyNjV9.6Qkq0rSQdFY8pm17fQcybfS3_UmiLCb6HCFBwnF-r6E","token_type":"Bearer","expires_in":3600}
+
+15:04:25.364 request:
+2 > POST http://localhost:8080/api/restaurant/save
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+2 > Connection: Keep-Alive
+2 > Content-Length: 101
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: localhost:8080
+2 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","name":"Happiness","city":"Saihat","country":"Saihat","address":"Saihat"}
+
+15:04:25.936 response time in milliseconds: 570.53
+2 < 200
+2 < Date: Mon, 16 Mar 2020 12:04:25 GMT
+2 < connection: keep-alive
+2 < content-length: 124
+2 < content-type: application/json
+{"id":"hashimatiRest_1","username":"hashimatiRest","name":"Happiness","city":"Saihat","country":"Saihat","address":"Saihat"}
+
+15:04:26.365 request:
+3 > POST http://localhost:8080/api/menu/uploadMenu/hashimatiRest/hashimatiRest_1
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+3 > Connection: Keep-Alive
+3 > Content-Length: 5298
+3 > Content-Type: multipart/form-data; boundary=CTIHETkiHZ2LCywJ8W4m4bWo9Rx6WO
+3 > Host: localhost:8080
+3 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+
+15:04:29.783 response time in milliseconds: 3403.79
+3 < 200
+3 < Date: Mon, 16 Mar 2020 12:04:29 GMT
+3 < connection: keep-alive
+3 < content-length: 359
+3 < content-type: application/json
+{"items":[{"itemName":"Shawerma Laham","description":"Beef, Bread, Taheeniah, Latus, Tomato","price":10.0,"category":"Sandwich"},{"itemName":"Shawerma Dyay","description":"Chicken, Bread, Taheeniah, Latus, Tomato","price":10.0,"category":"Sandwich"}],"id":"hashimatiRest_1","username":"hashimatiRest","restaurant":"hashimatiRest_1","creationStatus":"CREATED"}
+
+15:04:29.791 request:
+4 > POST http://localhost:8080/api/session/save
+4 > Accept-Encoding: gzip,deflate
+4 > Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+4 > Connection: Keep-Alive
+4 > Content-Length: 59
+4 > Content-Type: application/json; charset=UTF-8
+4 > Host: localhost:8080
+4 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","restaurant":"hashimatiRest_1"}
+
+15:04:30.058 response time in milliseconds: 266.19
+4 < 200
+4 < Date: Mon, 16 Mar 2020 12:04:30 GMT
+4 < connection: keep-alive
+4 < content-length: 128
+4 < content-type: application/json
+{"id":"hashimatiRest_1_1","restaurant":"hashimatiRest_1","username":"hashimatiRest","openingTime":1584360269846,"status":"OPEN"}
+
+15:04:30.067 request:
+5 > PUT http://localhost:8080/api/session/closesession
+5 > Accept-Encoding: gzip,deflate
+5 > Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+5 > Connection: Keep-Alive
+5 > Content-Length: 59
+5 > Content-Type: application/json; charset=UTF-8
+5 > Host: localhost:8080
+5 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","restaurant":"hashimatiRest_1"}
+
+15:04:30.379 response time in milliseconds: 309.72
+5 < 200
+5 < Date: Mon, 16 Mar 2020 12:04:30 GMT
+5 < connection: keep-alive
+5 < content-length: 7
+5 < content-type: application/json
+Success
+
+ss
+
+xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQyMDYxMjYsImlhdCI6MTU4NDIwMjUyNn0.Lk-MekQPLLZc9oIomv21u6fZvgwXZzEAxLF4C48oWWU
+6 > Connection: Keep-Alive
+6 > Content-Length: 59
+6 > Content-Type: application/json; charset=UTF-8
+6 > Host: localhost:8080
+6 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{"username":"hashimatiRest","restaurant":"hashimatiRest_1"}
+
+19:15:26.988 response time in milliseconds: 14.80
+6 < 200
+6 < Date: Sat, 14 Mar 2020 16:15:26 GMT
+6 < connection: keep-alive
+6 < content-length: 7
+6 < content-type: application/json
+Success
+
+
+ccess
+
+ url: http://localhost:8080/api/session/closesession, response: {"message":"Internal Server Error: Value can not be null"}
+content-type: application/json
+{"message":"Internal Server Error: Value can not be null"}
+
+19:07:36.818 status code was: 500, expected: 200, response time: 49, url: http://localhost:8080/api/session/closesession, response: {"message":"Internal Server Error: Value can not be null"}

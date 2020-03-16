@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: restaurant_user.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Mon Mar 16 15:04:30 AST 2020</td>
+            <td>16 Mar 2020, 15:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">restaurant_user.feature</td>
+                    <td      class="passed"    >47</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">47</td>
+
+          <td  class="passed"    >3</td>
+          <td >0</td>
+          <td class="total">3</td>
+
+          <td class="duration" data-value="11141641200">11s 141ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">restaurant_user.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Testing Restaurant User</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">042ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def rootURL = 'http://localhost:8080/api/'</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>15:04:19.200 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def registrationPath = 'users/register/restaurant'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def user = {id: 'hashimatiRest', password:'helloworld'}</span>
+  
+  <span class="lead-duration duration">033ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">4s 853ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Restaurant User Registration</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url rootURL.concat(registrationPath)</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request user</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">4s 834ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>15:04:20.065 request:
+1 &gt; POST http://localhost:8080/api/users/register/restaurant
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 46
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;id&quot;:&quot;hashimatiRest&quot;,&quot;password&quot;:&quot;helloworld&quot;}
+
+15:04:24.098 response time in milliseconds: 4032.42
+1 &lt; 200
+1 &lt; Date: Mon, 16 Mar 2020 12:04:23 GMT
+1 &lt; connection: keep-alive
+1 &lt; content-length: 7
+1 &lt; content-type: application/json
+Success</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert (response == 'Success' || response == 'Failed')</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def rootURL = 'http://localhost:8080/api/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>15:04:24.118 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def registrationPath = 'users/register/restaurant'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def user = {id: 'hashimatiRest', password:'helloworld'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 072ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Restaurant User Login</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/login'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request {username: 'hashimatiRest', password:'helloworld'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">1s 068ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>15:04:24.123 request:
+1 &gt; POST http://localhost:8080/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 52
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;password&quot;:&quot;helloworld&quot;}
+
+15:04:25.190 response time in milliseconds: 1065.80
+1 &lt; 200
+1 &lt; Date: Mon, 16 Mar 2020 12:04:25 GMT
+1 &lt; connection: keep-alive
+1 &lt; content-length: 577
+1 &lt; content-type: application/json
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;roles&quot;:[&quot;restaurant&quot;],&quot;access_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY0LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjQsImlhdCI6MTU4NDM2MDI2NH0.yCrCKIG3RdNU_RC6sCxP0n0ls2NE1QWRXZuLDa8MAVE&quot;,&quot;refresh_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJpYXQiOjE1ODQzNjAyNjV9.6Qkq0rSQdFY8pm17fQcybfS3_UmiLCb6HCFBwnF-r6E&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:3600}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response == {username:'hashimatiRest' ,'roles':['restaurant'],access_token:'#notnull',refresh_token:'#notnull',token_type:&quot;Bearer&quot;, expires_in:3600}</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">001ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def rootURL = 'http://localhost:8080/api/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>15:04:25.201 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def registrationPath = 'users/register/restaurant'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def user = {id: 'hashimatiRest', password:'helloworld'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">5s 171ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">create restaurant</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/login'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request {username: 'hashimatiRest', password:'helloworld'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">117ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>15:04:25.206 request:
+1 &gt; POST http://localhost:8080/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 52
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;password&quot;:&quot;helloworld&quot;}
+
+15:04:25.321 response time in milliseconds: 113.39
+1 &lt; 200
+1 &lt; Date: Mon, 16 Mar 2020 12:04:25 GMT
+1 &lt; connection: keep-alive
+1 &lt; content-length: 577
+1 &lt; content-type: application/json
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;roles&quot;:[&quot;restaurant&quot;],&quot;access_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo&quot;,&quot;refresh_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJpYXQiOjE1ODQzNjAyNjV9.6Qkq0rSQdFY8pm17fQcybfS3_UmiLCb6HCFBwnF-r6E&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:3600}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response == {username:'hashimatiRest' ,'roles':['restaurant'],access_token:'#notnull',refresh_token:'#notnull',token_type:&quot;Bearer&quot;, expires_in:3600}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def accessToken = response.access_token</span>
+  
+  <span class="lead-duration duration">031ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/api/restaurant/save'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = 'Bearer ' + accessToken</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request {username:'hashimatiRest', name:'Happiness', city:'Saihat', country:'Saihat', address:'Saihat' }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">574ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details">
+        <pre>15:04:25.364 request:
+2 &gt; POST http://localhost:8080/api/restaurant/save
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 101
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: localhost:8080
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;name&quot;:&quot;Happiness&quot;,&quot;city&quot;:&quot;Saihat&quot;,&quot;country&quot;:&quot;Saihat&quot;,&quot;address&quot;:&quot;Saihat&quot;}
+
+15:04:25.936 response time in milliseconds: 570.53
+2 &lt; 200
+2 &lt; Date: Mon, 16 Mar 2020 12:04:25 GMT
+2 &lt; connection: keep-alive
+2 &lt; content-length: 124
+2 &lt; content-type: application/json
+{&quot;id&quot;:&quot;hashimatiRest_1&quot;,&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;name&quot;:&quot;Happiness&quot;,&quot;city&quot;:&quot;Saihat&quot;,&quot;country&quot;:&quot;Saihat&quot;,&quot;address&quot;:&quot;Saihat&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def restaurantId = response.id</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/api/menu/uploadMenu/hashimatiRest/hashimatiRest_1'</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = 'Bearer ' + accessToken</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">multipart field file = read('C:/Users/ahmed/Desktop/Menu.xlsx')</span>
+  
+  <span class="lead-duration duration">291ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">multipart field message = 'hello world'</span>
+  
+  <span class="lead-duration duration">010ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">3s 532ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>15:04:26.365 request:
+3 &gt; POST http://localhost:8080/api/menu/uploadMenu/hashimatiRest/hashimatiRest_1
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+3 &gt; Connection: Keep-Alive
+3 &gt; Content-Length: 5298
+3 &gt; Content-Type: multipart/form-data; boundary=CTIHETkiHZ2LCywJ8W4m4bWo9Rx6WO
+3 &gt; Host: localhost:8080
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+
+15:04:29.783 response time in milliseconds: 3403.79
+3 &lt; 200
+3 &lt; Date: Mon, 16 Mar 2020 12:04:29 GMT
+3 &lt; connection: keep-alive
+3 &lt; content-length: 359
+3 &lt; content-type: application/json
+{&quot;items&quot;:[{&quot;itemName&quot;:&quot;Shawerma Laham&quot;,&quot;description&quot;:&quot;Beef, Bread, Taheeniah, Latus, Tomato&quot;,&quot;price&quot;:10.0,&quot;category&quot;:&quot;Sandwich&quot;},{&quot;itemName&quot;:&quot;Shawerma Dyay&quot;,&quot;description&quot;:&quot;Chicken, Bread, Taheeniah, Latus, Tomato&quot;,&quot;price&quot;:10.0,&quot;category&quot;:&quot;Sandwich&quot;}],&quot;id&quot;:&quot;hashimatiRest_1&quot;,&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;restaurant&quot;:&quot;hashimatiRest_1&quot;,&quot;creationStatus&quot;:&quot;CREATED&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/api/session/save'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = 'Bearer '+ accessToken</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request { username: 'hashimatiRest', restaurant:'hashimatiRest_1'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">269ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>15:04:29.791 request:
+4 &gt; POST http://localhost:8080/api/session/save
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+4 &gt; Connection: Keep-Alive
+4 &gt; Content-Length: 59
+4 &gt; Content-Type: application/json; charset=UTF-8
+4 &gt; Host: localhost:8080
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;restaurant&quot;:&quot;hashimatiRest_1&quot;}
+
+15:04:30.058 response time in milliseconds: 266.19
+4 &lt; 200
+4 &lt; Date: Mon, 16 Mar 2020 12:04:30 GMT
+4 &lt; connection: keep-alive
+4 &lt; content-length: 128
+4 &lt; content-type: application/json
+{&quot;id&quot;:&quot;hashimatiRest_1_1&quot;,&quot;restaurant&quot;:&quot;hashimatiRest_1&quot;,&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;openingTime&quot;:1584360269846,&quot;status&quot;:&quot;OPEN&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://localhost:8080/api/session/closesession'</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = 'Bearer '+ accessToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request { username: 'hashimatiRest', restaurant:'hashimatiRest_1'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method put</span>
+  
+  <span class="lead-duration duration">313ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>15:04:30.067 request:
+5 &gt; PUT http://localhost:8080/api/session/closesession
+5 &gt; Accept-Encoding: gzip,deflate
+5 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXNoaW1hdGlSZXN0IiwibmJmIjoxNTg0MzYwMjY1LCJyb2xlcyI6WyJyZXN0YXVyYW50Il0sImlzcyI6Im15LXJlc3R1cmFudC1vcmRlci1zeXMiLCJleHAiOjE1ODQzNjM4NjUsImlhdCI6MTU4NDM2MDI2NX0.o9O_nfyNYOb_FsMTmcDzlA11LKFyFLWhUWNdRlcWiGo
+5 &gt; Connection: Keep-Alive
+5 &gt; Content-Length: 59
+5 &gt; Content-Type: application/json; charset=UTF-8
+5 &gt; Host: localhost:8080
+5 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_181)
+{&quot;username&quot;:&quot;hashimatiRest&quot;,&quot;restaurant&quot;:&quot;hashimatiRest_1&quot;}
+
+15:04:30.379 response time in milliseconds: 309.72
+5 &lt; 200
+5 &lt; Date: Mon, 16 Mar 2020 12:04:30 GMT
+5 &lt; connection: keep-alive
+5 &lt; content-length: 7
+5 &lt; content-type: application/json
+Success</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

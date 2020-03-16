@@ -1,0 +1,33 @@
+<testsuite failures="2" name="hello.feature" skipped="0" tests="2" time="0.805186">
+  <testcase classname="hello" name="create and retrieve a cat" time="0.794666">
+    <failure message="hello.feature:6 - status code was: 401, expected: 200, response time: 36, url: http://localhost:8080/karate, response: ">Given url 'http://localhost:8080/karate' .................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: hello.feature:6 - status code was: 401, expected: 200, response time: 36, url: http://localhost:8080/karate, response: &#13;
+	at ✽.Then status 200 (hello.feature:6)&#13;
+
+And match response == "Hello World" ....................................... skipped</failure>
+  </testcase>
+  <testcase classname="hello" name="create and retrieve a cat" time="0.010519">
+    <failure message="hello.feature:15 - status code was: 401, expected: 200, response time: 6, url: http://localhost:8080/karate, response: ">Given url 'http://localhost:8080/karate' .................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: hello.feature:6 - status code was: 401, expected: 200, response time: 36, url: http://localhost:8080/karate, response: &#13;
+	at ✽.Then status 200 (hello.feature:6)&#13;
+
+And match response == "Hello World" ....................................... skipped
+Given url 'http://localhost:8080/karate' .................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: hello.feature:15 - status code was: 401, expected: 200, response time: 6, url: http://localhost:8080/karate, response: &#13;
+	at ✽.Then status 200 (hello.feature:15)&#13;
+
+And match response == "Hello" ............................................. skipped</failure>
+  </testcase>
+</testsuite>
