@@ -41,8 +41,6 @@ public class SessionService {
                 session.setOpeningTime(new Date()); 
         return sessionRepository.save(session); 
     }
-
-
 	public Single<String> setRestaurantStatus(String restaurant, SessionStatus close) {
         
         return Single.just(sessionRepository.changeSessionStatusByRestaurantAndStatus(restaurant, close).blockingGet().getStatus().toString()) ;

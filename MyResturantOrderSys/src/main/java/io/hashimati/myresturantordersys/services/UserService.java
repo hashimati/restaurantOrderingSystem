@@ -23,17 +23,12 @@ public class UserService {
     @Inject
     private UserRepository userRepository; 
 	public Single<String> save(User user) {
-    
-
-        
             user.setPassword(strongPasswordEncryptor.encryptPassword(user.getPassword())); 
             return userRepository.save(user);
-        
-        
     }
 
     public Single<Boolean> deleteById(String id) {
-		return userRepository.deleteById(id);
+	    return userRepository.deleteById(id);
 	}
 
 

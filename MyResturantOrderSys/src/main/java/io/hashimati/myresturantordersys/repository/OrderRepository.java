@@ -11,6 +11,7 @@ import org.bson.BsonString;
 import io.hashimati.myresturantordersys.domains.Order;
 import io.reactivex.Flowable;
 import io.reactivex.Single;
+import org.bson.conversions.Bson;
 
 /**
  * @author Ahmed Al Hashmi @hashimati
@@ -65,4 +66,50 @@ public class OrderRepository {
         .onErrorReturn(faile->Boolean.FALSE); 
         
 	}
+
+	public Single<Long> countBySessionNo(String id)
+    {
+        BsonDocument filter = new BsonDocument();
+
+        filter.append("sessionNo", new BsonString(id));
+
+
+        return Single.fromPublisher(getCollection().countDocuments(filter));
+    }
+
+
+    public Flowable<Order> getOrdersByUsernameAndRestaurant(String name, String restaurant) {
+        BsonDocument filter =new BsonDocument()
+                .append("restaurant", new BsonString(restaurant))
+                .append("restaurantOwner", new BsonString(name));
+        return
+                findAsFlowable(filter);
+    }
+    public Flowable<Order> getOrdersByCityAndStatus(String name, String restaurant) {
+        BsonDocument filter =new BsonDocument()
+                .append("city", new BsonString(restaurant))
+                .append("status", new BsonString(name));
+        return findAsFlowable(filter);
+    }
+    public Flowable<Order> getOrdersBySessionAndStatus(String name, String restaurant) {
+        BsonDocument filter =new BsonDocument()
+                .append("sessionNo", new BsonString(restaurant))
+                .append("status", new BsonString(name));
+        return findAsFlowable(filter);
+    }
+    public Flowable<Order> getOrdersByRestaurantAndStatus(String name, String restaurant) {
+        BsonDocument filter =new BsonDocument()
+                .append("restaurant", new BsonString(restaurant))
+                .append("status", new BsonString(name));
+        return findAsFlowable(filter);
+    }
+    public Flowable<Order> getOrdersByRestaurantAndDate(String name, String restaurant) {
+        BsonDocument filter =new BsonDocument()
+                .append("restaurant", new BsonString(restaurant))
+                .append("date", new BsonString(name));
+        return findAsFlowable(filter);
+    }
+
+
+
 }

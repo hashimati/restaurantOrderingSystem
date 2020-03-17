@@ -2,7 +2,6 @@ package io.hashimati.myresturantordersys.controllers;
 
 import javax.inject.Inject;
 
-import io.hashimati.myresturantordersys.domains.Menu;
 import io.hashimati.myresturantordersys.domains.Restaurant;
 import io.hashimati.myresturantordersys.services.RestaurantService;
 import io.micronaut.http.annotation.Controller;
@@ -10,7 +9,6 @@ import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
-import io.micronaut.http.server.multipart.MultipartBody;
 import io.reactivex.Single;
 
 /**
@@ -20,9 +18,7 @@ import io.reactivex.Single;
  @Controller("/api/restaurant")
 public class RestaurantController {
 
-
-
-    @Inject
+   @Inject
    private RestaurantService restaurantService; 
 
 
@@ -49,10 +45,4 @@ public class RestaurantController {
     {
         return restaurantService.deleteById(id); 
     }
-    
-
-
-
-
-
 }

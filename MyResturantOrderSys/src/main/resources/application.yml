@@ -38,6 +38,9 @@ micronaut:
       - pattern: /api/session/**
         access:
           - restaurant
+      - pattern: /A/**
+        access:
+          - isAnonymous()
     endpoints:
       login:
         enabled: true

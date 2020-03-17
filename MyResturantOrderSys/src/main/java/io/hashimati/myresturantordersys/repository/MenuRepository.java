@@ -62,8 +62,7 @@ public class MenuRepository {
     }
     public Single<String> update(Menu menu)
     {
-        
-        BsonDocument filter = new BsonDocument(); 
+        BsonDocument filter = new BsonDocument();
         filter.append("_id", new BsonString(menu.getId())); 
         return Single.fromPublisher(getCollection().findOneAndReplace(filter,menu))
         .map(success-> "Success")

@@ -9,6 +9,6 @@ public class Roles {
     private final String 
     ADMIN = "admin", 
     CUSTOMER = "customer", 
-    DRIVER = "driver", 
+    DELIVER = "deliver",
     RESTAURANT = "restaurant"; 
 }

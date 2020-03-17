@@ -1,6 +1,10 @@
 package io.hashimati.myresturantordersys.domains;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 
 import io.hashimati.myresturantordersys.config.CalculationConfiguration;
 import lombok.AllArgsConstructor;
@@ -18,10 +22,14 @@ import lombok.ToString;
 public class Order {
 
     private String id; 
-    private String username, resturantNo, branchNo, driverName = null; 
+    private String username, resturantNo, branchNo, driverName = null,
+    restaurantOwner;
 
-    private int Number; 
-    private ArrayList<MenuItem> items = new ArrayList<MenuItem>(); 
+    private java.time.LocalDate date = LocalDate.now();
+
+    private long Number;
+    //item and quantity
+    private HashMap<MenuItem, Integer> items = new HashMap<MenuItem, Integer>();
     private String address;
     private OrderStatus status = OrderStatus.SENDING; 
     private PaymentType paymentType = PaymentType.CASH_ON_DELIVERY; 
@@ -45,8 +53,8 @@ public class Order {
     public double calculate(CalculationConfiguration config){
         total = 0.0; 
         orderTotal = 0.0; 
-        for(MenuItem item : items){
-            orderTotal +=item.getPrice(); 
+        for(MenuItem item : items.keySet()){
+            orderTotal +=item.getPrice() * items.get(item);
 
             for(ItemOption io : item.getOptions())
                 orderTotal +=io.getPrice(); 
